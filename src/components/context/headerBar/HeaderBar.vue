@@ -7,6 +7,7 @@
     </span>
       <el-dropdown-menu slot="dropdown" >
         <el-dropdown-item command="logout">注销</el-dropdown-item>
+        <el-dropdown-item command="changePassword">修改密码</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
   </div>
@@ -22,6 +23,10 @@ export default {
         case "logout":
           util.DeleteLoginToken()
           this.$router.push("/login")
+          break
+        case "changePassword":
+          this.$router.push("/ChangePassword/")
+          break
       }
 
 

@@ -258,3 +258,11 @@ export function ApiResinInit(data) {
     data
   })
 }
+
+export function ApiChangePassword(data) {
+  return ApiRequest({
+    url: "/api/ChangeUserPassword/",
+    method: "post",
+    data
+  })
+}

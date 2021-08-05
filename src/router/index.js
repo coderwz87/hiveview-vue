@@ -19,6 +19,7 @@ const MysqlBackupDetail = () => import("views/backup/MysqlBackupDetail")
 const ApplicationDetail = () => import("views/application/ApplicationDetail")
 const ApplicationUpdateLog = () => import("views/application/ApplicationUpdateLog")
 const ResinInit = () => import("views/serviceInit/ResinInit")
+const ChangePassword = () => import("views/login/ChangePassword")
 Vue.use(VueRouter)
 //解决vue-router重复点击报错问题（this.$router.replace()）
 const originalReplace = VueRouter.prototype.replace;
@@ -108,6 +109,10 @@ const routes = [
       {
         path: "ApplicationUpdateLog/",
         component:ApplicationUpdateLog,
+      },
+      {
+        path: "ChangePassword/",
+        component:ChangePassword,
       }
 
     ]
