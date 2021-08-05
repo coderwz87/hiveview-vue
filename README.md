@@ -17,3 +17,6 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+rename src/network/request_example.js to src/network/request.js
+edit request.js baseurl
