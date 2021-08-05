@@ -5,7 +5,7 @@ import util from "@/util"
 
 export function PrometheusRequest(config) {
   const instance = axios.create({
-    baseURL: 'http://0.0.0.0:9093',
+    baseURL: 'http://10.240.37.20:9093',
     timeout: 5000
   })
   return instance(config)
@@ -13,7 +13,7 @@ export function PrometheusRequest(config) {
 
 export function ApiRequest(config) {
   const instance = axios.create({
-    baseURL: 'http://0.0.0.0:9080',
+    baseURL: 'http://124.205.11.228:9080',
     timeout: 5000,
     headers: config.headers || { 'content-type': 'application/x-www-form-urlencoded' },
 
