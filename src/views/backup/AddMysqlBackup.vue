@@ -46,6 +46,8 @@ export default {
       }
       ApiAddMysqlBackupDetail(data).then(res => {
         this.$router.push("/MysqlBackup/")
+      }).catch(err => {
+        console.log(err)
       })
     },
     cancel() {

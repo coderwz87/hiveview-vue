@@ -81,6 +81,8 @@ export default {
           if (valid) {
             ApiAddServer(this.ruleForm).then(()=>{
               this.$router.push("/serverInfo/")
+            }).catch(err => {
+              console.log(err)
             })
           } else {
             return false;

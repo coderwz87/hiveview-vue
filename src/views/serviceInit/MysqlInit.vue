@@ -55,6 +55,8 @@ export default {
       }
       ApiMysqlInit(data).then(res => {
         this.$router.push("/serverInfo/")
+      }).catch(err => {
+        console.log(err)
       })
     }
   }

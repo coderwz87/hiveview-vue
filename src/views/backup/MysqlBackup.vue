@@ -109,10 +109,11 @@ name: "MysqlBackup",
         }
       )
       ApiDeleteAllMysqlBackupDetail(deleteIDs).then( () => {
-          return ApiGetAllMysqlBackup()
-        }
-      ).then(res => {
-        this.tableData = res.data
+          ApiGetAllMysqlBackup().then(res => {
+            this.tableData = res.data
+          })
+        }).catch(err => {
+        console.log(err)
       })
     },
     getSearch(key){

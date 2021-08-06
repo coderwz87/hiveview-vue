@@ -49,6 +49,8 @@ export default {
       }
       ApiRedisInit(data).then(res => {
         this.$router.push("/serverInfo")
+      }).catch(err => {
+        console.log(err)
       })
     }
   }

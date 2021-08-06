@@ -111,6 +111,8 @@ name: "AllApplicationDetail",
       )
       ApiDeleteAllAppDetail(deleteIDs).then( () => {
         this.$router.push("/AddAppDetail/")
+      }).catch( (err) => {
+        console.log(err)
       })
     },
     AddApp(data) {
@@ -120,19 +122,25 @@ name: "AllApplicationDetail",
       let requestData = {}
       requestData["action"] = "restart"
       requestData["id"] = data.data.ID
-      ApiOperationApp(requestData)
+      ApiOperationApp(requestData).catch(err => {
+        console.log(err)
+      })
     },
     stopApp(data){
       let requestData = {}
       requestData["action"] = "stop"
       requestData["id"] = data.data.ID
-      ApiOperationApp(requestData)
+      ApiOperationApp(requestData).catch(err => {
+        console.log(err)
+      })
     },
     startApp(data){
       let requestData = {}
       requestData["action"] = "start"
       requestData["id"] = data.data.ID
-      ApiOperationApp(requestData)
+      ApiOperationApp(requestData).catch(err => {
+        console.log(err)
+      })
     },
     getSearch(key){
       ApiSearchAppDetail(key).then(res => {

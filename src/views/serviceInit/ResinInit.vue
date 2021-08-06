@@ -48,6 +48,8 @@ export default {
       }
       ApiResinInit(data).then(() => {
         this.$router.push("/AppDetail/")
+      }).catch(err => {
+        console.log(err)
       })
     }
   },

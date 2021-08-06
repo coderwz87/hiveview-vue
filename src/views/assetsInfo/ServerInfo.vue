@@ -182,6 +182,8 @@ export default {
       )
       ApiDeleteAllServer(deleteids).then( () => {
         this.getTableData()
+      }).catch( (err) => {
+        console.log(err)
       })
 
     },
@@ -220,7 +222,10 @@ export default {
       ApiGetServer().then(res => {
         this.tableData = res.data
         this.getFilterObject()
-      })
+      }).catch( (err) => {
+          console.log(err)
+        }
+      )
     },
     monitor(data) {
       let url = "http://10.240.37.20:3000/d/9CWBz0bik/node_exporter?orgId=1&var-job=consul-node-exporter&var-hostname=" + data.ip

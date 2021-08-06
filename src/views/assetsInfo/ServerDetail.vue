@@ -119,6 +119,8 @@ export default {
       }
       ApiUpdateServer(this.$route.params.id,updateData).then(() => {
           this.$router.go(-1)
+      }).catch(err => {
+        console.log(err)
       })
 
     }

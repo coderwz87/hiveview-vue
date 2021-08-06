@@ -266,3 +266,11 @@ export function ApiChangePassword(data) {
     data
   })
 }
+
+export function ApiAddUser(data) {
+  return ApiRequest({
+    url: "/api/addUser/",
+    method: "post",
+    data
+  })
+}

@@ -56,6 +56,8 @@ export default {
       }
       ApiAddAppDetail(data).then(res => {
         this.$router.push("/AppDetail/")
+      }).catch(err => {
+        console.log(err)
       })
     },
     cancel() {
