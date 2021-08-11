@@ -21,6 +21,8 @@ const ApplicationUpdateLog = () => import("views/application/ApplicationUpdateLo
 const ResinInit = () => import("views/serviceInit/ResinInit")
 const ChangePassword = () => import("views/login/ChangePassword")
 const AddUser = () => import("views/login/addUser")
+const OperationDetail = () => import("views/operation/OperationDetail")
+const AllOperationDetail = () => import("views/operation/AllOperationDetail")
 Vue.use(VueRouter)
 //解决vue-router重复点击报错问题（this.$router.replace()）
 const originalReplace = VueRouter.prototype.replace;
@@ -118,6 +120,14 @@ const routes = [
       {
         path: "AddUser/",
         component:AddUser,
+      },
+      {
+        path: "OperationDetail/:id/",
+        component:OperationDetail,
+      },
+      {
+        path: "AllOperationDetail/",
+        component:AllOperationDetail,
       }
 
     ]

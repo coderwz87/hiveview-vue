@@ -47,6 +47,9 @@
       <el-menu-item-group>
         <el-menu-item index="6-2" @click="itemClick('/ApplicationUpdateLog/')">应用更新信息</el-menu-item>
       </el-menu-item-group>
+      <el-menu-item-group>
+        <el-menu-item index="6-3" @click="itemClick('/AllOperationDetail/')">操作日志</el-menu-item>
+      </el-menu-item-group>
     </el-submenu>
   </el-menu>
 

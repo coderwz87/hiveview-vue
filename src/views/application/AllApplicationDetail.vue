@@ -59,6 +59,7 @@ name: "AllApplicationDetail",
       ],
       tableData : [
       ],
+
     }
   },
   methods:{
@@ -121,7 +122,7 @@ name: "AllApplicationDetail",
     restartApp(data){
       let requestData = {}
       requestData["action"] = "restart"
-      requestData["id"] = data.data.ID
+      requestData["appID"] = data.data.ID
       ApiOperationApp(requestData).catch(err => {
         console.log(err)
       })
@@ -129,7 +130,7 @@ name: "AllApplicationDetail",
     stopApp(data){
       let requestData = {}
       requestData["action"] = "stop"
-      requestData["id"] = data.data.ID
+      requestData["appID"] = data.data.ID
       ApiOperationApp(requestData).catch(err => {
         console.log(err)
       })
@@ -137,7 +138,7 @@ name: "AllApplicationDetail",
     startApp(data){
       let requestData = {}
       requestData["action"] = "start"
-      requestData["id"] = data.data.ID
+      requestData["appID"] = data.data.ID
       ApiOperationApp(requestData).catch(err => {
         console.log(err)
       })

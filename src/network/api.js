@@ -160,9 +160,8 @@ export function ApiDeleteAllAppDetail(data) {
 
 export function ApiOperationApp(data) {
   return ApiRequest({
-    url:"/api/operationApp/",
-    method:"post",
-    data
+    url:"/api/operationApp/?appID="+data["appID"]+"&action="+data["action"],
+    method:"get",
   })
 }
 
@@ -272,5 +271,27 @@ export function ApiAddUser(data) {
     url: "/api/addUser/",
     method: "post",
     data
+  })
+}
+
+export function ApiOperationDetail(id) {
+  return ApiRequest({
+    url:"/api/operationDetail/" + id + "/",
+    method:"get",
+  })
+}
+
+export function ApiOperationApprove(data) {
+  return ApiRequest({
+    url:"/api/OperationApprove/",
+    method:"post",
+    data
+  })
+}
+
+export function ApiAllOperationDetail() {
+  return ApiRequest({
+    url: "/api/GetAllOperationDetail/",
+    method: "get",
   })
 }
