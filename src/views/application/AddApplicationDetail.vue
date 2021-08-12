@@ -21,24 +21,24 @@ export default {
         {
           "label":"应用程序名",
           "title":"app_name",
-          "value":"",
+          "value":this.$route.query["app_name"],
         },
         {
           "label":"服务器地址",
           "title":"host",
-          "value":""
+          "value":this.$route.query["host"],
         },
         {
           "label":"部署目录",
           "title":"dir",
-          "value":""
+          "value":this.$route.query["dir"],
         }
       ],
       SelectItems:[
         {
           "label":"应用类型",
           "title":"type",
-          "value":"",
+          "value":this.$route.query["type"],
           "select":["resin","jar"]
         }
       ]

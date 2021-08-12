@@ -5,6 +5,7 @@
       <el-button type="text" @click="stopApp(data)" size="small">停止</el-button>
       <el-button type="text" @click="startApp(data)" size="small">启动</el-button>
       <el-button type="text" @click="AddApp(data)" size="small">扩容</el-button>
+      <el-button type="text" @click="CopyApp(data)" size="small">复制</el-button>
     </template>
   </BlankTable>
 </template>
@@ -142,6 +143,9 @@ name: "AllApplicationDetail",
       ApiOperationApp(requestData).catch(err => {
         console.log(err)
       })
+    },
+    CopyApp(data){
+      this.$router.push("/AddAppDetail/?app_name="+data.data.app_name+"&host="+data.data.host+"&dir="+data.data.dir+"&type="+data.data.type)
     },
     getSearch(key){
       ApiSearchAppDetail(key).then(res => {
