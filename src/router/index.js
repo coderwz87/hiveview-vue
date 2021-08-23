@@ -23,6 +23,10 @@ const ChangePassword = () => import("views/login/ChangePassword")
 const AddUser = () => import("views/login/addUser")
 const OperationDetail = () => import("views/operation/OperationDetail")
 const AllOperationDetail = () => import("views/operation/AllOperationDetail")
+const PushFile =() => import("views/batch/PushFile")
+const BatchLog = () => import("views/batch/BatchLog")
+const AllBatchLog = () => import("views/batch/AllBatchLog")
+const ExecCommand = () => import("views/batch/ExecCommand")
 Vue.use(VueRouter)
 //解决vue-router重复点击报错问题（this.$router.replace()）
 const originalReplace = VueRouter.prototype.replace;
@@ -128,6 +132,22 @@ const routes = [
       {
         path: "AllOperationDetail/",
         component:AllOperationDetail,
+      },
+      {
+        path: "PushFile/",
+        component: PushFile,
+      },
+      {
+        path: "batchLog/:id/",
+        component:BatchLog,
+      },
+      {
+        path: "AllBatchLog/",
+        component: AllBatchLog,
+      },
+      {
+        path: "ExecCommand/",
+        component: ExecCommand,
       }
 
     ]

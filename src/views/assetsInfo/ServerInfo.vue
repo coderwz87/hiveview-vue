@@ -159,7 +159,7 @@ export default {
           } else {
             this.$message({
             type: 'info',
-            message: '删除异常'
+            message: err,
             });
           }
         });

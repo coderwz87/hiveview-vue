@@ -295,3 +295,51 @@ export function ApiAllOperationDetail() {
     method: "get",
   })
 }
+
+export function ApiFileList() {
+  return ApiRequest({
+    url: "/api/batch/fileList/",
+  })
+}
+
+export function ApiGetGroup() {
+  return ApiRequest({
+    url:"/api/batch/groupList/",
+  })
+}
+
+export function ApiGetGroupIpList(data) {
+  return ApiRequest({
+    url:"/api/batch/groupIpList/",
+    method:"post",
+    data
+  })
+}
+
+export function ApiPushFile(data) {
+  return ApiRequest({
+    url: "/api/batch/filePush/",
+    method: "post",
+    data
+  })
+}
+
+export function ApiBatchLog(id) {
+  return ApiRequest({
+    url: "/api/batch/logContext/"+id+"/"
+  })
+}
+
+export function ApiGetAllBatchLog() {
+  return ApiRequest({
+    url: "/api/batch/allLog/"
+  })
+}
+
+export function ApiExecCommand(data) {
+  return ApiRequest({
+    url: "/api/batch/execCommand/",
+    method: "post",
+    data
+  })
+}
