@@ -22,7 +22,7 @@
       <el-select v-model="sizeForm.filename" placeholder="选择文件" style="float:left;">
         <el-option  v-for="(item,i) in fileList" :key="i" :label="item" :value="item"></el-option>
       </el-select>
-      <el-upload style="float:left;" :on-success="changeFileList" class="upload-demo" name="filename" :headers="headers" action="http://124.205.11.228:9080/api/batch/uploadFile/" >
+      <el-upload style="float:left;" :on-success="changeFileList" class="upload-demo" name="filename" :headers="headers" :action="actionURL" >
         <el-button size="small" round plain  type="primary">点击上传</el-button>
       </el-upload>
     </el-form-item>
@@ -45,7 +45,7 @@
 import {ApiFileList,ApiGetGroup,ApiGetGroupIpList,ApiPushFile} from "network/api"
 import {  Message } from 'element-ui'
 import util from "@/util";
-
+import {BASEURL} from "network/request"
 export default {
   name: "PushFile",
   data() {
@@ -57,6 +57,7 @@ export default {
         filename:"",
         targetDir:"",
       },
+      actionURL:BASEURL+"/api/batch/uploadFile/",
       headers:{},
       ipList:[],
       fileList:[],

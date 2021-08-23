@@ -2,6 +2,8 @@ import axios from "axios"
 import qs from "qs"
 import { MessageBox, Message } from 'element-ui'
 import util from "@/util"
+const BASEURL = "http://0.0.0.0:9080"
+export {BASEURL}
 
 export function PrometheusRequest(config) {
   const instance = axios.create({
@@ -13,7 +15,7 @@ export function PrometheusRequest(config) {
 
 export function ApiRequest(config) {
   const instance = axios.create({
-    baseURL: 'http://0.0.0.0:9080',
+    baseURL: BASEURL,
     timeout: 5000,
     headers: config.headers || { 'content-type': 'application/x-www-form-urlencoded' },
 
