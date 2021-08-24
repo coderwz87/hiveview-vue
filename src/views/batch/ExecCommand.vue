@@ -77,7 +77,6 @@ export default {
         data["ip"] = this.sizeForm.IP
         data["type"] = "single"
         data["command"] = this.sizeForm.Command
-        ApiExecCommand(data)
       }else if (this.sizeForm.type === "multi") {
         if (this.sizeForm.group.length === 0) {
           Message({
@@ -90,8 +89,10 @@ export default {
         data["group"] = this.sizeForm.group
         data["type"] = "multi"
         data["command"] = this.sizeForm.Command
-        ApiExecCommand(data)
       }
+      ApiExecCommand(data).catch(err => {
+        console.log(err)
+      })
 
     },
     selectGroup(groupName) {

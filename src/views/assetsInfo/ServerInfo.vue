@@ -145,11 +145,6 @@ export default {
           return ApiDeleteServer(deleteID)
         }).then(() => {
           this.getTableData()
-          this.$message({
-            type: 'success',
-            message: '删除成功!'
-          });
-
         }).catch((err) => {
           if (err === "cancel") {
             this.$message({

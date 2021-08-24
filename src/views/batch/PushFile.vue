@@ -96,7 +96,7 @@ export default {
         data["type"] = "single"
         data["target_dir"] = this.sizeForm.targetDir
         data["filename"] = this.sizeForm.filename
-        ApiPushFile(data)
+
       }else if (this.sizeForm.type === "multi") {
         if (this.sizeForm.group.length === 0) {
           Message({
@@ -110,8 +110,12 @@ export default {
         data["type"] = "multi"
         data["target_dir"] = this.sizeForm.targetDir
         data["filename"] = this.sizeForm.filename
-        ApiPushFile(data)
+
       }
+      ApiPushFile(data).catch(err => {
+        console.log(err)
+      })
+
 
     },
     selectGroup(groupName) {

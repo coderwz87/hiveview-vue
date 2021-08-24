@@ -3,7 +3,7 @@
     type="textarea"
     :rows="50"
     placeholder="请输入内容"
-    v-model="textarea">
+    v-model="textarea" readonly>
   </el-input>
 </template>
 
